@@ -13,7 +13,8 @@
 void main(void) {
 	int ej;
 
-	puts("Informatica Aplicada - Practica 2");
+	puts("\nInformatica Aplicada - Practica 2");
+	puts("\n---------------------------------");
 
 	while( 1 ){
 		puts("\nIngrese nro. de ejercicio, 0 para salir");
