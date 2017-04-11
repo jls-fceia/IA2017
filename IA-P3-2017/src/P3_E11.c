@@ -8,4 +8,7 @@
 
 typedef enum vt {v1=1200,v2=2400,v3=4800,v4=9600} VT;
 
+void E11_main( void ){
+	return;
+}
 

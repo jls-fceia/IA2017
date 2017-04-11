@@ -18,9 +18,11 @@ void E7_main()
 	Bytes b;
 	int i;
 
-	itoa(intCor,buffer,16);
+	// no estandar: itoa(intCor,buffer,16);
+	sprintf( buffer, "%x", intCor );
 	printf("%s\n",buffer);
-	itoa(intCor,buffer,2);
+	// no estandar: itoa(intCor,buffer,2);
+	sprintf( buffer, "%o", intCor );
 	printf("%s\n",buffer);
 
 	b.si=intCor;
