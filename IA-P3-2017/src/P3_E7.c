@@ -6,7 +6,7 @@
  */
 #include "P3.h"
 
-typedef union byte{
+typedef union byte {
 	short int si;
 	unsigned char bytes[2];
 } Bytes;
