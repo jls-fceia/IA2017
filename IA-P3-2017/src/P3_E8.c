@@ -9,7 +9,7 @@
 
 typedef union ascii{
 	unsigned int c;
-	struct{
+	struct {
 		unsigned char bit0:1;
 		unsigned char bit1:1;
 		unsigned char bit2:1;
@@ -21,25 +21,30 @@ typedef union ascii{
 	} A;
 } Ascii;
 
-char* modificapares(char* s){
-	int n=strlen(s),i;
-	char *p=(char*)malloc(n+1);
+char * modificapares( char* s ){
+	int n,i;
 	Ascii as;
-	strcpy(p,s);
-	for(i=0;i<n;i++){
-		as.c=s[i];	//almaceno el caracter en un byte (0-255)
-		as.A.bit0=~as.A.bit0;
-		as.A.bit2=~as.A.bit2;
-		as.A.bit4=~as.A.bit4;
-		as.A.bit6=~as.A.bit6;
-		p[i]=as.c;
+	char *p;
+
+	n = strlen( s );
+	p = (char*) malloc(n + 1);
+
+	strcpy( p, s );
+
+	for( i = 0; i < n; i++ ){
+		as.c = s[i];	//almaceno el caracter en un byte (0-255)
+		as.A.bit0 = ~as.A.bit0;
+		as.A.bit2 = ~as.A.bit2;
+		as.A.bit4 = ~as.A.bit4;
+		as.A.bit6 = ~as.A.bit6;
+		p[i] = as.c;
 	}
 	return p;
 }
 
 void E8_main(){
-	char frase[]="a";
-	char *p=modificapares(frase);
-	printf("%s\n",p);
+	char frase[] = "a";
+	char *p = modificapares(frase);
+	printf( "%s\n", p );
 	return;
 }

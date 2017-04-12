@@ -17,7 +17,7 @@ void main(void) {
 	puts("\n---------------------------------");
 
 	while( 1 ){
-		puts("\nIngrese nro. de ejercicio, 0 para salir");
+		puts("\nIngrese nro. de ejercicio, 0 para salir: ");
 
 		scanf("%d", &ej);
 
